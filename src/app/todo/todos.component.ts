@@ -11,9 +11,11 @@ import { TodoStore } from './todo.store';
     template: `
         <header class="header">
             <h1>todos</h1>
+            @defer (on immediate) {
             <app-new-todo (addTask)="store.add($event)" />
+            }
             <section class="main">
-                @if (store.filteredTodos().length > 0) {
+                @defer (when store.filteredTodos().length > 0) {
                 <app-todo-list
                     [todos]="store.filteredTodos()"
                     (deleteTask)="store.delete($event)"
@@ -22,7 +24,7 @@ import { TodoStore } from './todo.store';
                 />
                 }
             </section>
-            @if(store.todos().length > 0) {
+            @defer(when store.todos().length > 0) {
             <app-todo-footer [store]="store" />
             }
         </header>

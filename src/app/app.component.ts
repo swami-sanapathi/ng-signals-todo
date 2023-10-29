@@ -12,8 +12,8 @@ import { NewTodoComponent } from './todo/new-todo/new-todo.component';
         <footer class="info">
             <p>Double-click to edit a todo</p>
             <p>
-                Github link
-                <a href="http://todomvc.com"></a>
+                Created By
+                <a href="https://github.com/swami-sanapathi/ng-signals-todo">Swami</a>
             </p>
             <p>
                 Part of
