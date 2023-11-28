@@ -11,15 +11,15 @@ import { Todo } from '../todo.store';
                 <label (dblclick)="editing.set(true)">{{ todo.name }}</label>
                 <button class="destroy" (click)="deleteTask.emit(todo.id)"></button>
             </div>
-            @if(editing()) {
-            <input
-                class="edit"
-                type="text"
-                #editTodo
-                [value]="todo.name"
-                (keyup.enter)="update(editTodo.value, todo.id)"
-                (blur)="update(editTodo.value, todo.id)"
-            />
+            @if (editing()) {
+                <input
+                    class="edit"
+                    type="text"
+                    #editTodo
+                    [value]="todo.name"
+                    (keyup.enter)="update(editTodo.value, todo.id)"
+                    (blur)="update(editTodo.value, todo.id)"
+                />
             }
         </li>
     `

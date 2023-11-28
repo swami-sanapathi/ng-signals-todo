@@ -12,20 +12,20 @@ import { TodoStore } from './todo.store';
         <header class="header">
             <h1>todos</h1>
             @defer (on immediate) {
-            <app-new-todo (addTask)="store.add($event)" />
+                <app-new-todo (addTask)="store.add($event)" />
             }
             <section class="main">
                 @defer (when store.filteredTodos().length > 0) {
-                <app-todo-list
-                    [todos]="store.filteredTodos()"
-                    (deleteTask)="store.delete($event)"
-                    (completeTask)="store.complete($event)"
-                    (updateTask)="store.update($event)"
-                />
+                    <app-todo-list
+                        [todos]="store.filteredTodos()"
+                        (deleteTask)="store.delete($event)"
+                        (completeTask)="store.complete($event)"
+                        (updateTask)="store.update($event)"
+                    />
                 }
             </section>
-            @defer(when store.todos().length > 0) {
-            <app-todo-footer [store]="store" />
+            @defer (when store.todos().length > 0) {
+                <app-todo-footer [store]="store" />
             }
         </header>
     `,

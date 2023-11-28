@@ -7,13 +7,13 @@ import { Todo } from '../todo.store';
     selector: 'app-todo-list',
     template: `
         <ul class="todo-list">
-            @for(todo of todos; track todo.id) {
-            <app-todo-item
-                [todo]="todo"
-                (deleteTask)="deleteTask.emit($event)"
-                (completeTask)="completeTask.emit($event)"
-                (updateTask)="updateTask.emit($event)"
-            />
+            @for (todo of todos; track todo.id) {
+                <app-todo-item
+                    [todo]="todo"
+                    (deleteTask)="deleteTask.emit($event)"
+                    (completeTask)="completeTask.emit($event)"
+                    (updateTask)="updateTask.emit($event)"
+                />
             }
         </ul>
     `,

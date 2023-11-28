@@ -5,6 +5,8 @@
     "ng": "ng",
     "dev": "ng serve --port 4201",
     "build": "ng build",
+    "lint": "ng lint --fix",
+    "format": "prettier --write src/app/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -26,9 +28,17 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.0",
+    "@angular-eslint/builder": "17.1.0",
+    "@angular-eslint/eslint-plugin": "17.1.0",
+    "@angular-eslint/eslint-plugin-template": "17.1.0",
+    "@angular-eslint/schematics": "17.1.0",
+    "@angular-eslint/template-parser": "17.1.0",
     "@angular/cli": "^17.0.0",
     "@angular/compiler-cli": "^17.0.0",
-    "prettier": "^3.0.3",
+    "@typescript-eslint/eslint-plugin": "6.11.0",
+    "@typescript-eslint/parser": "6.11.0",
+    "eslint": "^8.53.0",
+    "prettier": "^3.1.0",
     "prettier-plugin-organize-imports": "^3.2.3",
     "typescript": "~5.2.2"
   },

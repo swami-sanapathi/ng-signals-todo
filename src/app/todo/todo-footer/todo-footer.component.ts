@@ -24,7 +24,7 @@ import { TodoStore } from '../todo.store';
             </ul>
 
             @if (store.completed() > 0) {
-            <button class="clear-completed" (click)="store.clearCompleted()">Clear completed</button>
+                <button class="clear-completed" (click)="store.clearCompleted()">Clear completed</button>
             }
         </footer>
     `,
